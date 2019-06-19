@@ -1,13 +1,14 @@
 package com.thoughtworks.tdd;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GameTest {
     private Game game;
 
-    @Before
+    @BeforeAll
     public void setUp() {
         game = new Game();
     }
@@ -61,23 +62,23 @@ public class GameTest {
         String result1 = game.generateResult(testNums[0]);
         String result2 = game.generateResult(testNums[1]);
 
-        Assert.assertEquals(result1, expected);
-        Assert.assertEquals(result2, expected);
+        assertEquals(result1, expected);
+        assertEquals(result2, expected);
     }
 
     private void run_when_it_is_only_one_type_of_special_number(int[] testNums, String expected) {
         String result1 = game.generateResult(testNums[0]);
         String result2 = game.generateResult(testNums[1]);
 
-        Assert.assertEquals(result1, expected);
-        Assert.assertEquals(result2, expected);
+        assertEquals(result1, expected);
+        assertEquals(result2, expected);
     }
 
     private void run_when_it_is_two_type_of_speciall_number(int [] testNums, String expected) {
         String result1 = game.generateResult(testNums[0]);
         String result2 = game.generateResult(testNums[1]);
 
-        Assert.assertEquals(result1, expected);
-        Assert.assertEquals(result2, expected);
+        assertEquals(result1, expected);
+        assertEquals(result2, expected);
     }
 }
